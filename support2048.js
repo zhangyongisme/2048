@@ -1,10 +1,15 @@
+var documentWidth = document.documentElement.clientWidth;
+var gridContainerWidth = 0.92 * documentWidth;
+var cellWidth = 0.18 * documentWidth;
+var cellPadding = 0.04*documentWidth;
+
 //设置方格位置
 function getPosTop(i, j) {
-	return 20 + i * 120;
+	return cellPadding + i*(cellPadding + cellWidth); 
 };
 
 function getPosLeft(i, j) {
-	return 20 + j * 120;
+	return cellPadding + j*(cellPadding + cellWidth); 
 };
 
 //设置数字方格颜色
